@@ -1,0 +1,69 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1.4fr 0.1fr 1.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Preview Preview Preview"
+    "Run Run Run"
+    "Editor Editor Editor";
+}
+
+.Preview {
+  grid-area: Preview;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-action {
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+
+.preview-window {
+  width: 60%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.Run {
+  grid-area: Run;
+  border: 1px solid #000;
+  display: flex;
+  gap: 0.2rem;
+  justify-content: flex-end;
+}
+
+.Editor {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "JS Html CSS"
+    "JS Html CSS"
+    "JS Html CSS";
+  grid-area: Editor;
+  background-color: beige;
+}
+
+.JS {
+  grid-area: JS;
+  height: 100%;
+}
+
+.Html {
+  grid-area: Html;
+  height: 100%;
+}
+
+.CSS {
+  grid-area: CSS;
+  height: 100%;
+}

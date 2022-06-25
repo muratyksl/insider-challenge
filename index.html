@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="Preview">
+        <div class="preview-action">
+          <select
+            name="history-dropdown"
+            id="history-dropdown"
+            aria-placeholder="history"
+          >
+            <option value="" disabled selected>History</option>
+          </select>
+          <button id="save-btn">SAVE</button>
+          <dialog id="save-dialog">
+            <form method="dialog">
+              <div>
+                <label for="history-name">Name:</label>
+                <input type="text" name="history-name" id="history-name" />
+              </div>
+              <div>
+                <button value="cancel">Cancel</button>
+                <button id="confirm-btn" value="default">Confirm</button>
+              </div>
+            </form>
+          </dialog>
+        </div>
+        <div class="preview-window"></div>
+      </div>
+      <div class="Run">
+        <button id="minimize-btn">Minimize</button>
+        <button id="run-btn">Run</button>
+      </div>
+      <div class="Editor">
+        <div id="js" class="JS"></div>
+        <div id="html" class="Html"></div>
+        <div id="css" class="CSS"></div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
