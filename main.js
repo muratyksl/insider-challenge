@@ -4,6 +4,7 @@ import "./style.css";
 import "./runPreview.js";
 import "./saveContent.js";
 import "./loadContent.js";
+import "./selectHandler.js";
 
 export const jsEditor = monaco.editor.create(document.getElementById("js"), {
   value: 'console.log("Hello, world")',

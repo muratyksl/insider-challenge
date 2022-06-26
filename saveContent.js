@@ -1,8 +1,10 @@
+import { loadHistory } from "./loadContent";
 import { cssEditor, htmlEditor, jsEditor } from "./main";
 
 const saveBtn = document.querySelector("#save-btn");
 const dialog = document.querySelector("#save-dialog");
 const confirmBtn = document.querySelector("#confirm-btn");
+const historyDropdown = document.getElementById("history-dropdown");
 
 saveBtn.addEventListener("click", () => {
   dialog.showModal();
@@ -31,4 +33,6 @@ confirmBtn.addEventListener("click", () => {
 
   oldHistory.push(newOption);
   localStorage.setItem("history", JSON.stringify(oldHistory));
+  loadHistory();
+  historyDropdown.value = historyName;
 });

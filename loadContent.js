@@ -10,7 +10,7 @@ window.addEventListener("beforeunload", () => {
   saveContent();
 });
 
-function loadHistory() {
+export function loadHistory() {
   const LSHistory = JSON.parse(localStorage.getItem("history"));
   if (LSHistory !== null) {
     const historyList = document.querySelector("#history-dropdown");
